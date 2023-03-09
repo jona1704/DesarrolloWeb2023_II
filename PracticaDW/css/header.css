@@ -1,0 +1,112 @@
+nav {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.nav_logo{
+    color: white;
+    font-size: x-large;
+}
+
+.nav_escuela{
+    font-size: xx-large;
+    color: gold;
+}
+
+.nav_menu{
+    color: white;
+    font-size: x-large;
+    display: none;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+.nav_enlaces{
+    display: inline-block;
+    padding: 20px 10px;
+}
+
+.nav_enlaces a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: .5s;
+}
+
+.nav_enlaces a:hover{
+    color: gold;
+}
+
+.nav_contacto{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.nav_contacto a button{
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    background-color: blue;
+    transition: .5s;
+}
+
+.nav_contacto a button:hover{
+    color: black;
+    background-color: gold;
+    transform: scale(1.2);
+}
+
+@media (max-width: 678px){
+    nav{
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .nav_logo{
+        margin-bottom: 10px;
+    }
+
+    .nav_menu{
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 32px;
+    }
+
+    nav ul{
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+
+    .nav_enlaces{
+        display: block;
+    }
+
+    .nav_enlaces:hover{
+        background-color: blue;
+    }
+
+    .nav_enlaces a:hover{
+        font-weight: bold;
+        color: white;
+    }
+
+    .nav_contacto{
+        padding-top: 20px;
+    }
+
+    .nav_contacto a button{
+        width: 200px;
+    }
+
+    .active{
+        display: block;
+    }
+}
