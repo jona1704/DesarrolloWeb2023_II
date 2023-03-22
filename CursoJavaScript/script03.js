@@ -93,20 +93,3 @@ let b = "5";
 console.log(a == b); // True (El contenido es el mismo)
 console.log(a === b); // False (El contenido y el tipo deben ser el mismo)
 
-// Objetos en JavaScript
-
-// Es una colección de claves (o propiedades) y valores
-// Las claves pueden ser númericas o cadenas
-// Los valores pueden ser cualquier tipo permitido por JavaScript
-
-let miGato = {
-    "nombre": "Mishi",
-    "raza": "Siames",
-    "edad": 4,
-    "juguetes": ["Sonaja", "Campanillas"]
-};
-
-// Accediendo a los valores con notación de punto
-console.log(miGato.nombre);
-// Accediendo a los valores con notación de corchetes
-console.log(miGato["raza"]);

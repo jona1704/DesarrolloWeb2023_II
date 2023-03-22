@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+    <link rel="shortcut icon" href="img/www.png" type="image/x-icon">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/contacto.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -22,27 +23,50 @@
         </ul>
     </nav>
     <main>
-        <div class="container_form">
-            <div class="form_img">
+        <div class="contenedor">
+            <h1 class="titulo_principal">Contactanos ...</h1>
+            <div class="container_form">
+                <div class="form_img">
+                    <h2>FES Acatlán</h1>
+                    <h3>Matemáticas Aplicadas y Computación</h3>
+                </div>
+                <form class="form_content">
+                    <div class="grupo_formulario">
+                        <label for="nombre">Nombre: </label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Introduce Nombre ...">
+                        <div class="error"></div>
+                    </div>
+                    <div class="grupo_formulario">
+                        <label for="email">Correo: </label>
+                        <input type="text" id="correo" name="correo" placeholder="Introduce E-mail ...">
+                        <div class="error"></div>
+                    </div>
+                    <div class="grupo_formulario">
+                        <label for="telefono">Teléfono: </label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Introduce Teléfono ...">
+                        <div class="error"></div>
+                    </div>
+                    <div class="grupo_formulario">
+                        <label for="pais">País: </label>
+                        <select id="pais" name="pais">
+                            <option value="mexico">México</option>
+                            <option value="usa">Estados Unidos</option>
+                            <option value="canada">Canadá</option>
+                        </select>
+                    </div>
+                    <div class="grupo_formulario">
+                        <label for="asunto">Asunto: </label>
+                        <input type="text" name="asunto" id="asunto" placeholder="Escribe Asunto">
+                        <div class="error"></div>
+                    </div>
+                    <div class="grupo_formulario">
+                        <label for="mansaje">Envía Mensaje: </label>
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                        <div class="error"></div>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
             </div>
-            <form class="form_content" action="">
-                <div class="error"></div>
-                <label for="nombre">Nombre: </label>
-                <input type="text" id="nombre" name="nombre" placeholder="Introduce Nombre ...">
-                <label for="email">Correo: </label>
-                <input type="email" id="correo" name="correo" placeholder="Introduce E-mail ...">
-                <label for="telefono">Teléfono: </label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Introduce Teléfono ...">
-                <label for="pais">País: </label>
-                <select id="pais" name="pais">
-                    <option value="mexico">México</option>
-                    <option value="usa">Estados Unidos</option>
-                    <option value="canada">Canadá</option>
-                </select>
-                <label for="pais">Envía Mensaje: </label>
-                <textarea name="mensaje" id="" cols="30" rows="10"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
         </div>
     </main>
     <footer>

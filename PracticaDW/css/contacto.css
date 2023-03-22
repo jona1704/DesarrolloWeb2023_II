@@ -1,14 +1,130 @@
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #D5DBDB;
+    font-family: 'Montserrat', sans-serif;
 }
 
 main{
-    background-image: url(../img/15456028869_4c8586b948_b.jpg);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .23), rgba(0, 0, 0, .56)), url(../img/paperclip.jpg); 
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 100%;  
+    padding: 20px;
+}
+
+.contenedor{
+    width: 750px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.contenedor h1{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.container_form{
+    border: 1px solid black;
+    border-radius: 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;  
+}
+
+.form_img{
+    width: 40%;
+    background: linear-gradient(to bottom, rgba(245, 246, 252, 0.32), rgba(54,54,144,0.83)), 
+    url(../img/1429.jpg) no-repeat center center;
+    background-size: 100% 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form_img h2, .form_img h3{
+    text-align: center;
+    color: white;
+}
+
+form{
+    width: 60%;
+    padding: 20px;
+    background-color: burlywood;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.grupo_formulario{
+    margin-bottom: 12px;
+}
+
+.grupo_formulario label{
+    font-weight: bold;
+    font-size: 20px;    
+}
+
+.grupo_formulario .error{
+    margin-top: 5px;
+}
+
+input, label, select, textarea{
+    display: block;
+    height: 28px;
+    width: 100%;
+}
+
+textarea{
+    height: 100px;
+    min-height: 80px;
+    max-height: 100px;
+    max-width: 100%;
+    min-width: 80%;
+}
+
+button{
+    width: 100%;
+    background-color: darkblue;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: gold;
+    color: black;
+}
+
+.error{
+    color: red;
+    font-weight: 500;
+}
+
+@media (max-width: 768px){
+    .contenedor{
+        width: 98%;
+    }
+    
+    .container_form{
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .form_img{
+        width: 100%;
+        height: 150px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 20px;
+    }
+
+    form{
+        width: 100%;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 20px;
+    }
 }
