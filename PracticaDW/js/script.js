@@ -63,6 +63,20 @@ const validarFormulario = () => {
     } else{
         error[4].style.visibility = 'hidden';
     }
+
+    let datos = new FormData();
+    datos.append("nombre", valorNombre);
+    datos.append("correo", valorCorreo);
+    datos.append("telefono", valorTelefono);
+    datos.append("pais", pais);
+    datos.append("asunto", valorAsunto);
+    datos.append("mensaje", valorMensaje);
+
+    fetch("php/principal.php", {
+        method: 'post',
+        body: datos
+    })
+    .then(respuesta => console.log(respuesta));
 }
 
 const validar_correo = (email) => /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
