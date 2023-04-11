@@ -7,6 +7,6 @@ $pais = $_POST["pais"];
 $asunto = $_POST["asunto"];
 $mensaje = $_POST["mensaje"];
 
-echo "OK";
+echo json_encode(array("OK" => 1));
 
 ?>

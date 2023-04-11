@@ -76,7 +76,11 @@ const validarFormulario = () => {
         method: 'post',
         body: datos
     })
-    .then(respuesta => console.log(respuesta));
+    .then(respuesta => console.log(respuesta))
+    .then((datos) => {
+        console.log(datos);
+        location.href = "php/principal.php";
+    })
 }
 
 const validar_correo = (email) => /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
