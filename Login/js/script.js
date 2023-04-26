@@ -30,11 +30,15 @@ const validar_formulario = () => {
     })
     .then(response => response.json())
     .then(({exito}) => {
-        if(exito === 1) location.href = alert("Bien");
+        if(exito === 1){
+            // alert("Bien");
+            // console.log(valor);
+            location.href = "php/home.php";
+        } 
         else mensaje.innerHTML = "Error en los datos. Veriquelos";
     })
     .catch(error => {
-        // console.log(error);
+        console.log(error);
         mensaje.innerHTML = "No se pudo procesar la información";
     })
 }

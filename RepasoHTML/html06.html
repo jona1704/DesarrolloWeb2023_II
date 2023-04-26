@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento</title>
+    <style>
+        .contenedor_principal{
+            background-color: aquamarine;
+            width: 700px;
+            height: 1000px;
+            position: relative;
+        }
+
+        /* Por defecto el posicionamiento es estatico 
+        que se indica con la propiedad position: static */
+        .contenedores{
+            width: 150px;
+            height: 150px;
+        }
+
+        .color1{
+            background-color: brown;
+            border: 1px solid black;
+            position: absolute; /* Se activan top | bottom | left | right */
+        }
+
+        .color2{
+            background-color: darkblue;
+            border: 1px solid black;
+            position: absolute; /* Se activan top | bottom | left | right */
+            /*left: 800px;
+            /*top: 100px;
+            bottom: 200px;*/
+            right: 0;
+            top: 0;
+        }
+
+        .color3{
+            background-color: darkgoldenrod;
+            border: 1px solid black;
+            position: absolute; /* Se activan top | bottom | left | right */
+            bottom: 0;
+            left: 0;
+        }
+
+        .color4{
+            position: fixed;
+            background-color: blueviolet;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor_principal">
+        <div class="contenedores color1">1</div>
+        <div class="contenedores color2">2</div>
+        <div class="contenedores color3">3</div>
+        <div class="contenedores color4">4</div>
+    </div>
+    
+</body>
+</html>

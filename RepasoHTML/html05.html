@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        main{
+            background-color: cadetblue;
+        }
+
+        header{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav{
+            background-color: yellowgreen;
+        }
+
+        nav ul{
+            display: flex;
+        }
+
+        footer{
+            background-color: black;
+            color: white;
+            padding: 25px 0;
+        }
+
+        .contenedor_padre{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        
+        section{
+            width: 80%;
+            background-color: bisque;
+        }
+
+        aside{
+            width: 20%;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML Semántico -->
+    <main>
+        <!-- main - seccion principa -->
+        <header>
+            Pagina Web de la FES
+        </header>
+        <nav>
+            <ul>
+                <li>Opcion 1</li>
+                <li>Opcion 2</li>
+                <li>Opcion 3</li>
+            </ul>
+        </nav>
+        <div class="contenedor_padre">
+            <section>
+                <article>Articulo 1</article>
+                <article>Articulo 2</article>
+                <article>Articulo 3</article>
+            </section>
+            <aside>
+                <!-- a = anchor -->
+                <a href="#">Enlace 1</a>
+                <a href="#">Enlace 2</a>
+                <a href="#">Enlace 3</a>
+            </aside>
+        </div>
+        <footer>
+            <address>
+                Santa Cruz Acatlán S/N <br>
+                Naucalpan, Edo. de México <br>
+            </address>
+        </footer>
+    </main>
+</body>
+</html>

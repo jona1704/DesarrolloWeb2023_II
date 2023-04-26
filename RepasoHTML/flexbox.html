@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .contenedor_principal{
+            display: flex;
+            /*flex-direction: row; /* row | column | row-reverse | column-reverse */
+            /*flex-wrap: wrap-reverse; /* nowrap | wrap | wrap-reverse*/
+            flex-flow: row wrap; /* (flex-direction flex-wrap) */
+            /*justify-content: flex-start; /* flex-start | flex-end | center | space-between | space-around | space-evenly */
+            /*align-items: stretch; 
+            /*align-content: space-evenly; /* flex-start | flex-end | center | space-between | space-around | space-evenly */
+            /*gap: 150px 50px; /* column-gap row-gap */
+            row-gap: 50px;
+            column-gap: 20px;
+            width: 500px;
+            height: 500px;
+            background-color: bisque;
+        }
+
+        .contenedores_secundarios{
+            /* display: inline; */
+            width: 50px;
+            height: 50px; 
+            text-align: center;
+            line-height: 50px;
+            background-color: chocolate;
+        }
+
+        /*.contenido1{
+            /* height: 70px;
+            line-height: 70px; 
+            /*background: linear-gradient(to left, blue, pink, green);
+            background: rgb(2,0,36);
+background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(54,54,144,1) 25%, rgba(8,189,239,1) 66%, rgba(255,0,224,0.7429096638655462) 98%);
+        }
+
+        .contenido2{
+            height: 90px;
+            line-height: 90px;
+        }*/
+    </style>
+</head>
+<body>
+    <div class="contenedor_principal">
+        <div class="contenedores_secundarios">1</div>
+        <div class="contenedores_secundarios">2</div>
+        <div class="contenedores_secundarios contenido1">3</div>
+        <div class="contenedores_secundarios">4</div>
+        <div class="contenedores_secundarios">5</div>
+        <div class="contenedores_secundarios contenido2">6</div>
+        <div class="contenedores_secundarios">7</div>
+        <div class="contenedores_secundarios">8</div>
+        <div class="contenedores_secundarios">9</div>
+        <div class="contenedores_secundarios">10</div>
+        <div class="contenedores_secundarios">11</div>
+        <div class="contenedores_secundarios">12</div>
+        <div class="contenedores_secundarios">13</div>
+        <!--<div class="contenedores_secundarios">7</div>
+        <div class="contenedores_secundarios">8</div>
+        <div class="contenedores_secundarios">9</div>
+        <div class="contenedores_secundarios">10</div>
+        <div class="contenedores_secundarios">11</div>
+        <div class="contenedores_secundarios">12</div>
+        <div class="contenedores_secundarios">13</div>
+        <div class="contenedores_secundarios">10</div>
+        <div class="contenedores_secundarios">11</div>
+        <div class="contenedores_secundarios">12</div>
+        <div class="contenedores_secundarios">13</div> -->
+    </div>
+</body>
+</html>

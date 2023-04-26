@@ -1,0 +1,17 @@
+body {
+    /* 
+     Parejas de propiedades:valores
+    */
+    background-color: #0A3BC8;
+    color: black;
+    font-weight: bold;
+
+    /* 
+    
+    hex:  0   FF  0  FF   0  FF
+      rgb(0..255, 0..255, 0..255)
+      hsl(0..255, 0..100%, 0..100%)
+
+      #0A3BC8
+    */
+}
