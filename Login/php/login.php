@@ -12,8 +12,13 @@ if(isset($_POST["usuario"]) && !empty($_POST["usuario"])
 
     $sql = "SELECT * FROM usuarios WHERE (usuario = '$usuario' AND pass = '$pass')";
     $result = $conn->query($sql);
-    if($result->num_rows > 0){
-        $_SESSION["usuario"] = $_POST["usuario"];
+    $data = $result->fetch_assoc();
+    if($data){
+        $_SESSION["id"] = $data["id"];
+        $_SESSION["nombre"] = $data["nombre"];
+        $_SESSION["apellido"] = $data["apellido"];
+        $_SESSION["usuario"] = $data["usuario"];
+        $_SESSION["email"] = $data["correo"];
         echo json_encode(array('exito' => 1));
     } else{
         echo json_encode(array('exito' => 0));

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento</title>
+    <style>
+        .contenedor{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: bisque;
+        }
+
+        .contenedor1, .contenedor2, .contenedor3, .contenedor4,
+        .contenedor5 {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+        }
+
+        .contenedor1{
+            background-color: blue;
+            color: white;
+        }
+
+        .contenedor2{
+            top: 0;
+            right: 0;
+            background-color: darkred;
+            color: white;
+        }
+
+        .contenedor3{
+            bottom: 0;
+            left: 0;
+            background-color: gold;
+        }
+
+        .contenedor4{
+            bottom: 0;
+            right: 0;
+            background-color: aquamarine;
+        }
+
+        .contenedor5{
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="contenedor1">1</div>
+        <div class="contenedor2">2</div>
+        <div class="contenedor3">3</div>
+        <div class="contenedor4">4</div>
+        <div class="contenedor5">5</div>
+    </div>
+</body>
+</html>
