@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,19 +11,35 @@
 </head>
 <body>
     <?php
-        session_start();
+        require 'conexion.php';
 
         if(!isset($_SESSION["usuario"])){
-            header("location: ../login.html");
+            header("location: ../index.html");
+        }
+
+        $usuario = $_SESSION["usuario"];
+
+        $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario'";
+        $result = $conn->query($sql);
+        $data = $result->fetch_assoc();
+        $path = "";
+        if(isset($data['imagen']) && !empty($data['imagen'])){
+            $imagen = $data['imagen'];
+            $path = "../uploads/$imagen";
+        } else{
+            $path = "../img/pngwing.com.png";
         }
 
         echo "<h1>Bienvenido ". $_SESSION["usuario"]. "</h1>";
         echo "<br><br>";
-        echo "<img class='fotoPerfil' src='../img/pngwing.com.png'>";
+        echo "<img class='fotoPerfil' src='". $path . "'>";
         echo "<br><br>";
 
         echo "<a class='btnLogout' href='logout.php'>Cerrar Sesión</a>";
         echo "<a class='btnEditar' href='perfil.php'>Configuración</a>";
+        echo "<a class='btnMostrar' href='mostrarProductos.php'>Productos</a>";
+
+        $conn->close();
     ?>
 </body>
 </html>

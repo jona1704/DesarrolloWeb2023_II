@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa08</title>
+</head>
+<body>
+    <input type="text" id="input_value">
+    <button id="btnAdd">Add</button>
+    <button id="btnDisplay">Display</button>
+    <div id="content"></div>
+    <script>
+        const input_value = document.getElementById("input_value");
+        const btnAdd = document.getElementById("btnAdd");
+        const btnDisplay = document.getElementById("btnDisplay");
+        const content = document.getElementById("content");
+        let array = [];
+        btnAdd.addEventListener("click", (e) => {
+            e.preventDefault();
+            if(input_value.value !== ""){
+                array.push(input_value.value);
+            }
+            input_value.value = "";
+        })
+
+        btnDisplay.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            let str = "";
+            if(array.length === 0){
+                content.innerHTML = "Empty array";
+            } else{
+                array.forEach((element, index) => {
+                    str += `Element ${index} = ${element}<br>`;
+                    
+                });
+                content.innerHTML = str;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-.btnLogout, .btnEditar{
+.btnLogout, .btnEditar, .btnMostrar{
     display: inline-block;
     margin-right: 10px;
     text-decoration: none;

@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php 
+    session_start(); 
+    if(!isset($_SESSION["usuario"])){
+        header("location: ../index.html");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,6 +59,30 @@
         </div>
     </div>
     <!-- Fin de Ventana Modal Editar Datos  -->
+
+    <!-- Ventana Modal para Cambiar Contraseña -->
+    <div id="passwordModal" class="modal">
+        <div class="modalContent">
+            <span class="closeButton">&times;</span>
+            <h3>Editar Información</h3>
+            <form id="formPassword">
+                <div id="notificacion"></div>
+                <input type="hidden" id="id" name="id" value="<?php echo $_SESSION["id"]; ?>">
+                <label for="passActual">Contraseña Actual:</label>
+                <input type="password" id="passActual" name="passActual" placeholder="Ingrese Contraseña Actual ...">
+                <label for="passNuevo">Contraseña Nueva:</label>
+                <input type="password" id="passNuevo" name="passNuevo" placeholder="Ingrese Nueva Contraseña ...">
+                <label for="repetirPassNuevo">Repetir Contraseña Nueva:</label>
+                <input type="password" id="repetirPassNuevo" name="apellido" placeholder="Repita Nueva Contraseña ...">
+                <div class="formGroup" style="justify-content: flex-start; gap: 8px">
+                    <button id="btnCambiarPass">Cambiar Contraseña</button>
+                    <button id="btnCancelarPass">Cancelar</button>
+                </div>
+            </form>    
+        </div>
+    </div>
+    <!-- Fin de la Ventana Modal para Cambiar Contraseña -->
+
     <script src="../js/perfil.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
