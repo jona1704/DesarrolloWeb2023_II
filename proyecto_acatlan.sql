@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-05-2023 a las 10:52:00
+-- Tiempo de generación: 24-05-2023 a las 00:56:39
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -34,6 +34,15 @@ CREATE TABLE `carrito` (
   `cantidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `carrito`
+--
+
+INSERT INTO `carrito` (`id`, `id_usuario`, `id_producto`, `cantidad`) VALUES
+(2, 1, 1, 17),
+(4, 1, 2, 6),
+(7, 1, 4, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -52,7 +61,7 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id_producto`, `nombre_producto`, `precio`, `imagen`) VALUES
-(1, 'LG 19M38A-B.AWM Monitor 19\", VGA, Color Negro', '1399.00', 'imagen1.jpg'),
+(1, 'LG 19M38A-B.AWM Monitor 19in, VGA, Color Negro', '1399.00', 'imagen1.jpg'),
 (2, 'Garmin Smartwatch Fenix 7 Solar, Touch, Bluetooth, Android/iOS, Negro - Resistente al Agua', '20499.00', 'imagen2.jpg'),
 (3, 'Soporte de Organizador de Bolígrafos de Escritorio', '269.00', 'imagen3.jpg'),
 (4, 'Asistente de Voz Amazon Echo Dot 5.a Generación con Alexa ', '1599.00', 'imagen4.jpg'),
@@ -129,7 +138,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `carrito`
 --
 ALTER TABLE `carrito`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`

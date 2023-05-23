@@ -46,7 +46,7 @@ const enviarDatos = async () => {
         .then(response => response.json())
         .then(({exito}) => {
             if(exito === 1){
-                location.href = "php/home.php";
+                location.href = "home.php";
             } 
         })
         .catch(error => {
